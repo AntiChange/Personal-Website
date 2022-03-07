@@ -16,8 +16,8 @@ export default class TrebleClef {
   setModel() {
     this.model = this.resource.scene;
     this.model.scale.set(2, 2, 2);
-    this.model.rotation.set(Math.PI / 2, 0, 0)
-    console.log(this.model)
+    this.model.rotation.set(Math.PI / 2, 0, 0);
+    console.log(this.model);
     this.scene.add(this.model);
 
     this.model.traverse((child) => {

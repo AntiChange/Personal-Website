@@ -11,7 +11,7 @@ export default class Scroll extends EventEmitter {
 
     // Scroll event
     window.addEventListener("scroll", () => {
-      this.scrollX = window.scrollY / this.experience.sizes.width * 3;
+      this.scrollX = (window.scrollY / this.experience.sizes.width) * 3;
       this.trigger("scroll");
     });
   }
