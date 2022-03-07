@@ -7,8 +7,8 @@ import Camera from "./Camera.js";
 import Renderer from "./Renderer.js";
 import World from "./World/World.js";
 import Resources from "./Utils/Resources.js";
-
 import sources from "./sources.js";
+import Scroll from "./Utils/Scroll.js";
 
 let instance = null;
 
@@ -35,6 +35,7 @@ export default class Experience {
     this.camera = new Camera();
     this.renderer = new Renderer();
     this.world = new World();
+    this.scroll = new Scroll();
 
     // Resize event
     this.sizes.on("resize", () => {
@@ -43,6 +44,10 @@ export default class Experience {
 
     // Time tick event
     this.time.on("tick", () => {
+      this.update();
+    });
+
+    this.scroll.on("scroll", () => {
       this.update();
     });
   }
