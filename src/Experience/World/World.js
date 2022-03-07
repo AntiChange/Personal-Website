@@ -13,6 +13,8 @@ export default class World {
       // Setup
       this.trebleclef = new TrebleClef();
       this.environment = new Environment();
+
+      this.trebleclef.playAnimation();
     });
   }
 

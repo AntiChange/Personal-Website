@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import Experience from "../Experience.js";
+import gsap from "gsap";
 
 export default class TrebleClef {
   constructor() {
@@ -24,6 +25,15 @@ export default class TrebleClef {
       if (child instanceof THREE.Mesh) {
         child.castShadow = true;
       }
+    });
+  }
+
+  playAnimation() {
+    gsap.to(this.model.rotation, {
+      duration: 2.3,
+      ease: "power2.inOut",
+      x: "+=6",
+      z: "+=0.4",
     });
   }
 }

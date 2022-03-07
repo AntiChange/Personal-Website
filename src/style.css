@@ -7,6 +7,11 @@ html {
   background: #e1dce4;
 }
 
+/* Uncomment for production */
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
 .webgl {
   position: fixed;
   top: 0;
@@ -17,7 +22,7 @@ html {
 .section {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 1000vh;
   position: relative;
   font-family: "Cabin", sans-serif;
   color: #000000;
