@@ -1,7 +1,6 @@
 import Experience from "../Experience.js";
 import Environment from "./Environment.js";
-import Floor from "./Floor.js";
-import Fox from "./Fox.js";
+import TrebleClef from "./TrebleClef.js";
 
 export default class World {
   constructor() {
@@ -12,13 +11,10 @@ export default class World {
     // Wait for resources
     this.resources.on("ready", () => {
       // Setup
-      this.floor = new Floor();
-      this.fox = new Fox();
+      this.trebleclef = new TrebleClef();
       this.environment = new Environment();
     });
   }
 
-  update() {
-    if (this.fox) this.fox.update();
-  }
+  update() {}
 }
