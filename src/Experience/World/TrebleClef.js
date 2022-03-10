@@ -19,7 +19,7 @@ export default class TrebleClef {
     this.model = this.resource.scene;
     this.model.scale.set(2, 2, 2);
     this.model.position.set(0, 0.5, 0);
-    this.model.rotation.set(Math.PI / 2, 0, Math.PI / 16);
+    this.model.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.model);
 
     this.model.traverse((child) => {
@@ -39,7 +39,7 @@ export default class TrebleClef {
   }
 
   update() {
-    this.model.rotation.z += Math.cos(this.time.elapsed / 1000) * 0.002;
+    this.model.rotation.z += Math.cos(this.time.elapsed / 1000) * 0.001;
     this.model.position.y += Math.cos(this.time.elapsed / 1000) * 0.001;
   }
 }

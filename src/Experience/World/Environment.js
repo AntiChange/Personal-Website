@@ -17,16 +17,21 @@ export default class Environment {
   }
 
   setSunLight() {
-    this.sunLight = new THREE.DirectionalLight("#ffffff", 100);
+    this.sunLight = new THREE.PointLight("#ffffff", 10);
     this.sunLight.castShadow = true;
     this.sunLight.shadow.camera.far = 15;
     this.sunLight.shadow.mapSize.set(1024, 1024);
     this.sunLight.shadow.normalBias = 0.05;
-    this.sunLight.position.set(3.5, 2, -1.25);
+    this.sunLight.position.set(5.3, 0, -5.3);
     this.scene.add(this.sunLight);
 
     // Debug
     if (this.debug.active) {
+      this.debug.ui.add(this.sunLight.position, "x", -10, 10, 0.1);
+      this.debug.ui.add(this.sunLight.position, "y", -10, 10, 0.1);
+      this.debug.ui.add(this.sunLight.position, "z", -10, 10, 0.1);
+      const pointLightHelper = new THREE.PointLightHelper(this.sunLight, 0.2);
+      this.scene.add(pointLightHelper);
     }
   }
 }
