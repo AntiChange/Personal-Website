@@ -1,6 +1,7 @@
 import Experience from "../Experience.js";
 import Environment from "./Environment.js";
 import TrebleClef from "./TrebleClef.js";
+import Staff from "./Staff.js";
 
 export default class World {
   constructor() {
@@ -12,11 +13,15 @@ export default class World {
     this.resources.on("ready", () => {
       // Setup
       this.trebleclef = new TrebleClef();
+      this.staff = new Staff();
       this.environment = new Environment();
 
+      // Initial animation once loaded
       this.trebleclef.playAnimation();
     });
   }
 
-  update() {}
+  update() {
+    if (this.trebleclef) this.trebleclef.update();
+  }
 }
