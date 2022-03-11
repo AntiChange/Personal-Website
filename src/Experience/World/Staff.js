@@ -2,6 +2,7 @@ import * as THREE from "three";
 import Experience from "../Experience.js";
 import { MeshLine, MeshLineMaterial } from "three.meshline";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
+import gsap from "gsap";
 
 export default class Staff {
   constructor() {
@@ -10,7 +11,9 @@ export default class Staff {
     this.resources = this.experience.resources;
     this.font = this.resources.items.defaultFont;
     this.matcap = this.resources.items.blackMatcap;
-
+    this.time = this.experience.time;
+    this.lines = [];
+    this.sharps = [];
     // Material (three.meshline was used due to varying line thicknesses)
     const material = new MeshLineMaterial({
       color: 0x000000,
@@ -18,7 +21,6 @@ export default class Staff {
     });
 
     // Start line
-    const lines = [];
     let points = [];
     points.push(new THREE.Vector3(-3.5, 2.05, 0));
     points.push(new THREE.Vector3(-3.5, -2.05, 0));
@@ -30,7 +32,7 @@ export default class Staff {
       line,
       new MeshLineMaterial({ color: 0x000000, lineWidth: 0.5 })
     );
-    lines.push(mesh);
+    this.lines.push(mesh);
     this.scene.add(mesh);
 
     // 5 Staves
@@ -43,14 +45,14 @@ export default class Staff {
       line.setPoints(points);
       line.setGeometry(geometry);
       const mesh = new THREE.Mesh(line, material);
-      lines.push(mesh);
+      this.lines.push(mesh);
       this.scene.add(mesh);
     }
 
     // Sharps (3D text)
-    const textGeometry = new TextGeometry("#", {
+    const sharpGeometry = new TextGeometry("#", {
       font: this.font,
-      size: 0.8,
+      size: 1,
       height: 0.2,
       curveSegments: 12,
       bevelEnabled: true,
@@ -59,12 +61,42 @@ export default class Staff {
       bevelOffset: 0,
       bevelSegments: 5,
     });
-    textGeometry.computeBoundingBox();
-    textGeometry.rotateY(-Math.PI / 8);
+    sharpGeometry.computeBoundingBox();
+    sharpGeometry.color = 0x000000;
     const textMaterial = new THREE.MeshStandardMaterial({});
-    textMaterial.color = 0x000000;
-    const text = new THREE.Mesh(textGeometry, textMaterial);
+    const sharp1 = new THREE.Mesh(sharpGeometry, textMaterial);
+    sharp1.translateX(1);
+    sharp1.translateY(1.4);
+    sharp1.translateZ(0);
+    sharp1.rotateY(-Math.PI / 16);
+    const sharp2 = new THREE.Mesh(sharpGeometry, textMaterial);
+    sharp2.translateX(1.4);
+    sharp2.translateY(0);
+    sharp2.rotateY(-Math.PI / 16);
+    this.scene.add(sharp1, sharp2);
+    this.sharps.push(sharp1);
+    this.sharps.push(sharp2);
+  }
 
-    this.scene.add(text);
+  playAnimation() {
+    gsap.to(this.sharps[0].rotation, {
+      duration: 1.7,
+      ease: "power2.inOut",
+      y: Math.PI * 2,
+      x: Math.PI * 2,
+    });
+    gsap.to(this.sharps[1].rotation, {
+      duration: 2,
+      ease: "power2.inOut",
+      y: Math.PI * 2,
+      x: Math.PI * 2,
+    });
+  }
+
+  breathe() {
+    for (let sharp of this.sharps) {
+      sharp.rotation.y += Math.sin(this.time.elapsed / 1000) * 0.0005;
+      sharp.position.y += Math.sin(this.time.elapsed / 1000) * 0.0005;
+    }
   }
 }

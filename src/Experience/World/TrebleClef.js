@@ -38,7 +38,7 @@ export default class TrebleClef {
     });
   }
 
-  update() {
+  breathe() {
     this.model.rotation.z += Math.cos(this.time.elapsed / 1000) * 0.001;
     this.model.position.y += Math.cos(this.time.elapsed / 1000) * 0.001;
   }

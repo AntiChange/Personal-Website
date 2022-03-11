@@ -17,11 +17,13 @@ export default class World {
       this.environment = new Environment();
 
       // Initial animation once loaded
-      this.trebleclef.playAnimation();
+      if (this.trebleclef) this.trebleclef.playAnimation();
+      if (this.staff) this.staff.playAnimation();
     });
   }
 
   update() {
-    if (this.trebleclef) this.trebleclef.update();
+    if (this.trebleclef) this.trebleclef.breathe();
+    if (this.staff) this.staff.breathe();
   }
 }
