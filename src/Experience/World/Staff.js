@@ -14,6 +14,7 @@ export default class Staff {
     this.time = this.experience.time;
     this.lines = [];
     this.sharps = [];
+    this.timeSignature = [];
     // Material (three.meshline was used due to varying line thicknesses)
     const material = new MeshLineMaterial({
       color: 0x000000,
@@ -76,6 +77,32 @@ export default class Staff {
     this.scene.add(sharp1, sharp2);
     this.sharps.push(sharp1);
     this.sharps.push(sharp2);
+
+    // Time signature (4/4)
+    const signatureGeometry = new TextGeometry("4", {
+      font: this.font,
+      size: 2,
+      height: 0.2,
+      curveSegments: 12,
+      bevelEnabled: true,
+      bevelThickness: 0.03,
+      bevelSize: 0.02,
+      bevelOffset: 0,
+      bevelSegments: 5,
+    });
+    signatureGeometry.computeBoundingBox();
+    signatureGeometry.color = 0x000000;
+    const first4 = new THREE.Mesh(signatureGeometry, textMaterial);
+    first4.translateX(2.8);
+    first4.translateY(0);
+    first4.rotateY(-Math.PI / 16);
+    const second4 = new THREE.Mesh(signatureGeometry, textMaterial);
+    second4.translateX(2.8);
+    second4.translateY(-2);
+    second4.rotateY(-Math.PI / 16);
+    this.timeSignature.push(first4);
+    this.timeSignature.push(second4);
+    this.scene.add(first4, second4);
   }
 
   playAnimation() {
@@ -86,18 +113,34 @@ export default class Staff {
       x: Math.PI * 2,
     });
     gsap.to(this.sharps[1].rotation, {
-      duration: 2,
+      duration: 2.2,
       ease: "power2.inOut",
       y: Math.PI * 2,
       x: Math.PI * 2,
     });
+    gsap.to(this.timeSignature[0].rotation, {
+      duration: 3,
+      ease: "power4.inOut",
+      z: -Math.PI * 2,
+    })
+    gsap.to(this.timeSignature[1].rotation, {
+      duration: 3.5,
+      ease: "power4.inOut",
+      z: -Math.PI * 2,
+    })
   }
 
   breathe() {
     for (let sharp of this.sharps) {
       sharp.rotation.y = Math.sin(this.time.elapsed / 1000) * 0.2;
     }
-    this.sharps[0].position.y = Math.cos(this.time.elapsed / 1000) * 0.09 + 1.45;
-    this.sharps[1].position.y = Math.cos(this.time.elapsed / 1000) * 0.09 - 0.05;
+    this.sharps[0].position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.09 + 1.45;
+    this.sharps[1].position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.09 - 0.05;
+    for (let signature of this.timeSignature) {
+      signature.rotation.y = - Math.cos(this.time.elapsed / 1000) * 0.1;
+    }
+    
   }
 }
