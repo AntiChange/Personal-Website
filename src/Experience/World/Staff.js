@@ -66,12 +66,12 @@ export default class Staff {
     const textMaterial = new THREE.MeshStandardMaterial({});
     const sharp1 = new THREE.Mesh(sharpGeometry, textMaterial);
     sharp1.translateX(1);
-    sharp1.translateY(1.4);
+    sharp1.translateY(1.35);
     sharp1.translateZ(0);
     sharp1.rotateY(-Math.PI / 16);
     const sharp2 = new THREE.Mesh(sharpGeometry, textMaterial);
     sharp2.translateX(1.4);
-    sharp2.translateY(0);
+    sharp2.translateY(-0.05);
     sharp2.rotateY(-Math.PI / 16);
     this.scene.add(sharp1, sharp2);
     this.sharps.push(sharp1);
@@ -95,8 +95,9 @@ export default class Staff {
 
   breathe() {
     for (let sharp of this.sharps) {
-      sharp.rotation.y += Math.sin(this.time.elapsed / 1000) * 0.0005;
-      sharp.position.y += Math.sin(this.time.elapsed / 1000) * 0.0005;
+      sharp.rotation.y = Math.sin(this.time.elapsed / 1000) * 0.2;
     }
+    this.sharps[0].position.y = Math.cos(this.time.elapsed / 1000) * 0.09 + 1.45;
+    this.sharps[1].position.y = Math.cos(this.time.elapsed / 1000) * 0.09 - 0.05;
   }
 }
