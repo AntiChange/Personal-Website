@@ -31,6 +31,7 @@ export default class Resources extends EventEmitter {
 
           loadingBarElement.classList.add("ended");
           loadingBarElement.style.transform = "";
+          this.trigger("ready");
         }, 500);
       },
       // Progress
@@ -78,9 +79,5 @@ export default class Resources extends EventEmitter {
     this.items[source.name] = file;
 
     this.loaded++;
-
-    if (this.loaded === this.toLoad) {
-      this.trigger("ready");
-    }
   }
 }
