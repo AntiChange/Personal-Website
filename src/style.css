@@ -56,7 +56,6 @@ html {
   transition: transform 1.5s ease-in-out;
 }
 
-
 .stop-scrolling {
   height: 100%;
   overflow: hidden;

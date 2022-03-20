@@ -139,7 +139,7 @@ export default class Staff {
     this.sharps[1].position.y =
       Math.cos(this.time.elapsed / 1000) * 0.09 - 0.05;
     for (let signature of this.timeSignature) {
-      signature.rotation.y = -Math.cos(this.time.elapsed / 1000) * 0.1;
+      signature.rotation.y = -Math.cos(this.time.elapsed / 1000) * 0.2;
     }
   }
 }
