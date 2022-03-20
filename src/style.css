@@ -7,7 +7,7 @@ html {
   background: #e1dce4;
 }
 
-/* Uncomment for production */
+/* Uncomment once finished; need to see loading bar for testing */
 /* body::-webkit-scrollbar {
   display: none;
 } */
@@ -22,7 +22,7 @@ html {
 .opening {
   display: flex;
   align-items: center;
-  height: 200vh;
+  height: 700vh;
   position: relative;
   color: #000000;
   padding-left: 10%;
@@ -54,4 +54,10 @@ html {
   transform: scaleX(0);
   transform-origin: 100% 0;
   transition: transform 1.5s ease-in-out;
+}
+
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

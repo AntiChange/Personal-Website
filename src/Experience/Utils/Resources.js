@@ -21,6 +21,8 @@ export default class Resources extends EventEmitter {
   }
 
   setLoaders() {
+    // Temporarily disable scrolling while loading page
+    document.body.classList.add("stop-scrolling");
     const loadingBarElement = document.querySelector(".loading-bar");
     this.loaders = {};
     this.loadingManager = new THREE.LoadingManager(
@@ -31,8 +33,12 @@ export default class Resources extends EventEmitter {
 
           loadingBarElement.classList.add("ended");
           loadingBarElement.style.transform = "";
+
           this.trigger("ready");
         }, 500);
+        window.setTimeout(() => {
+          document.body.classList.remove("stop-scrolling");
+        }, 3000);
       },
       // Progress
       (itemUrl, itemsLoaded, itemsTotal) => {
