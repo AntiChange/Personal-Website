@@ -122,12 +122,12 @@ export default class Staff {
       duration: 3,
       ease: "power4.inOut",
       z: -Math.PI * 2,
-    })
+    });
     gsap.to(this.timeSignature[1].rotation, {
       duration: 3.5,
       ease: "power4.inOut",
       z: -Math.PI * 2,
-    })
+    });
   }
 
   breathe() {
@@ -139,8 +139,7 @@ export default class Staff {
     this.sharps[1].position.y =
       Math.cos(this.time.elapsed / 1000) * 0.09 - 0.05;
     for (let signature of this.timeSignature) {
-      signature.rotation.y = - Math.cos(this.time.elapsed / 1000) * 0.1;
+      signature.rotation.y = -Math.cos(this.time.elapsed / 1000) * 0.1;
     }
-    
   }
 }
