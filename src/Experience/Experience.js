@@ -50,6 +50,11 @@ export default class Experience {
     this.scroll.on("scroll", () => {
       this.update();
     });
+
+    // Return to top of page on refresh
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   }
 
   resize() {
