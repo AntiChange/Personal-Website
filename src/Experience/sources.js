@@ -14,4 +14,9 @@ export default [
     type: "texture",
     path: "textures/matcaps/Black.png",
   },
+  {
+    name: "violinModel",
+    type: "gltfModel",
+    path: "models/violin.glb",
+  },
 ];

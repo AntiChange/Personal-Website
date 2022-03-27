@@ -61,10 +61,10 @@ export default class Staff {
       bevelSize: 0.02,
       bevelOffset: 0,
       bevelSegments: 5,
+      color: 0x00000,
     });
     sharpGeometry.computeBoundingBox();
-    sharpGeometry.color = 0x000000;
-    const textMaterial = new THREE.MeshStandardMaterial({});
+    const textMaterial = new THREE.MeshStandardMaterial({ color: 0x000000 });
     const sharp1 = new THREE.Mesh(sharpGeometry, textMaterial);
     sharp1.translateX(1);
     sharp1.translateY(1.35);
@@ -89,9 +89,9 @@ export default class Staff {
       bevelSize: 0.02,
       bevelOffset: 0,
       bevelSegments: 5,
+      color: 0x00000,
     });
     signatureGeometry.computeBoundingBox();
-    signatureGeometry.color = 0x000000;
     const first4 = new THREE.Mesh(signatureGeometry, textMaterial);
     first4.translateX(2.8);
     first4.translateY(0);

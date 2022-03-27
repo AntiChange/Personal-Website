@@ -33,6 +33,9 @@ export default class Environment {
 
     this.scene.add(this.rightSunLight, this.leftSunLight);
 
+    this.ambientLight = new THREE.AmbientLight("#ffffff", 1000);
+    this.scene.add(this.ambientLight);
+
     // Debug
     if (this.debug.active) {
       this.debug.ui.add(this.rightSunLight.position, "x", -10, 10, 0.1);
@@ -41,6 +44,7 @@ export default class Environment {
       this.debug.ui.add(this.leftSunLight.position, "x", -10, 10, 0.1);
       this.debug.ui.add(this.leftSunLight.position, "y", -10, 10, 0.1);
       this.debug.ui.add(this.leftSunLight.position, "z", -10, 10, 0.1);
+      this.debug.ui.add(this.ambientLight, "intensity", -10, 10, 0.1);
       const rightPointLightHelper = new THREE.PointLightHelper(
         this.rightSunLight,
         0.2
