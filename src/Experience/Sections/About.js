@@ -7,6 +7,7 @@ export default class About {
     this.experience = new Experience();
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
+    this.time = this.experience.time;
 
     // Resources
     this.violin = this.resources.items.violinModel;
@@ -20,5 +21,12 @@ export default class About {
     this.violinModel.position.set(8, -2, 0);
     this.violinModel.rotation.set(-Math.PI / 12, 0, -Math.PI / 4);
     this.scene.add(this.violinModel);
+  }
+
+  breathe() {
+    this.violinModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 - 2;
+    this.violinModel.rotation.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1;
   }
 }

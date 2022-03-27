@@ -27,5 +27,6 @@ export default class World {
   update() {
     if (this.trebleclef) this.trebleclef.breathe();
     if (this.staff) this.staff.breathe();
+    if (this.about) this.about.breathe();
   }
 }
