@@ -9,12 +9,15 @@ export default class Staff {
     this.experience = new Experience();
     this.scene = this.experience.scene;
     this.resources = this.experience.resources;
-    this.font = this.resources.items.defaultFont;
-    this.matcap = this.resources.items.blackMatcap;
     this.time = this.experience.time;
     this.lines = [];
     this.sharps = [];
     this.timeSignature = [];
+
+    // Resources
+    this.font = this.resources.items.defaultFont;
+    this.matcap = this.resources.items.blackMatcap;
+
     // Material (three.meshline was used due to varying line thicknesses)
     const material = new MeshLineMaterial({
       color: 0x000000,
@@ -66,13 +69,10 @@ export default class Staff {
     sharpGeometry.computeBoundingBox();
     const textMaterial = new THREE.MeshStandardMaterial({ color: 0x000000 });
     const sharp1 = new THREE.Mesh(sharpGeometry, textMaterial);
-    sharp1.translateX(1);
-    sharp1.translateY(1.35);
-    sharp1.translateZ(0);
+    sharp1.position.set(1, 1.35, 0);
     sharp1.rotateY(-Math.PI / 16);
     const sharp2 = new THREE.Mesh(sharpGeometry, textMaterial);
-    sharp2.translateX(1.4);
-    sharp2.translateY(-0.05);
+    sharp2.position.set(1.4, -0.05, 0);
     sharp2.rotateY(-Math.PI / 16);
     this.scene.add(sharp1, sharp2);
     this.sharps.push(sharp1);

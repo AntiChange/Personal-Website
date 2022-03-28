@@ -19,4 +19,9 @@ export default [
     type: "gltfModel",
     path: "models/violin.glb",
   },
+  {
+    name: "sectionFont",
+    type: "font",
+    path: "/fonts/Roboto Thin_Italic.json",
+  },
 ];
