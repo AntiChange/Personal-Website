@@ -32,6 +32,8 @@ export default class About {
     const textMesh = new Mesh(textGeometry, textMaterial);
     textMesh.position.set(5, 2.2, 0);
     this.scene.add(textMesh);
+
+    // Models
     this.setModel();
   }
 
