@@ -37,6 +37,14 @@ export default class Experience {
     this.world = new World();
     this.scroll = new Scroll();
 
+    // Labels
+    this.points = [
+      {
+        position: new THREE.Vector3(5.6, -1.2, 0),
+        element: document.querySelector(".point-0"),
+      },
+    ];
+
     // Resize event
     this.sizes.on("resize", () => {
       this.resize();
@@ -44,10 +52,6 @@ export default class Experience {
 
     // Time tick event
     this.time.on("tick", () => {
-      this.update();
-    });
-
-    this.scroll.on("scroll", () => {
       this.update();
     });
 
@@ -66,6 +70,17 @@ export default class Experience {
     this.camera.update();
     this.world.update();
     this.renderer.update();
+
+    for (const point of this.points) {
+      const screenPosition = point.position.clone();
+      screenPosition.project(this.camera.instance);
+
+      const translateX = screenPosition.x * this.sizes.width * 0.5;
+      const translateY =
+        -(screenPosition.y * this.sizes.height * 0.5) + this.scroll.scrollY;
+
+      point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+    }
   }
 
   destroy() {
