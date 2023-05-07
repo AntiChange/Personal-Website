@@ -24,4 +24,9 @@ export default [
     type: "font",
     path: "/fonts/Roboto Thin_Italic.json",
   },
+  {
+    name: "programModel",
+    type: "gltfModel",
+    path: "models/program.glb",
+  },
 ];

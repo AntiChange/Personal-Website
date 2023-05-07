@@ -40,8 +40,12 @@ export default class Experience {
     // Labels
     this.points = [
       {
-        position: new THREE.Vector3(5.6, -1.2, 0),
+        position: new THREE.Vector3(5.6, -1.1, 0),
         element: document.querySelector(".point-0"),
+      },
+      {
+        position: new THREE.Vector3(7.1, -0.1, 0),
+        element: document.querySelector(".point-1"),
       },
     ];
 
@@ -67,10 +71,6 @@ export default class Experience {
   }
 
   update() {
-    this.camera.update();
-    this.world.update();
-    this.renderer.update();
-
     for (const point of this.points) {
       const screenPosition = point.position.clone();
       screenPosition.project(this.camera.instance);
@@ -81,6 +81,9 @@ export default class Experience {
 
       point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
     }
+    this.camera.update();
+    this.world.update();
+    this.renderer.update();
   }
 
   destroy() {

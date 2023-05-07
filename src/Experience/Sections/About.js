@@ -13,6 +13,7 @@ export default class About {
 
     // Resources
     this.violin = this.resources.items.violinModel;
+    this.program = this.resources.items.programModel;
     this.font = this.resources.items.sectionFont;
 
     // 3D "About me" text
@@ -38,15 +39,26 @@ export default class About {
   }
 
   setModel() {
+    // Violin Model
     this.violinModel = this.violin.scene;
     this.violinModel.scale.set(1, 1, 1);
-    this.violinModel.position.set(5.5, -2, 0);
+    this.violinModel.position.set(5.4, -2, 0.5);
     this.violinModel.rotation.set(-Math.PI / 12, 0, -Math.PI / 4);
     this.scene.add(this.violinModel);
+    
+    // Program Model
+    this.programModel = this.program.scene;
+    this.programModel.scale.set(0.2, 0.2, 0.2);
+    this.programModel.position.set(7.3, -0.5, 0.5);
+    this.programModel.rotation.set(Math.PI / 2, 0, Math.PI / 12);
+    this.scene.add(this.programModel);
   }
 
   breathe() {
     this.violinModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 2;
     this.violinModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
+
+    this.programModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
+    this.programModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
   }
 }
