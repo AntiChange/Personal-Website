@@ -24,7 +24,7 @@ export default class Environment {
     this.rightSunLight.shadow.normalBias = 0.05;
     this.rightSunLight.position.set(5.3, 0, -5.3);
 
-    this.leftSunLight = new THREE.PointLight("#ffffff", 0.5);
+    this.leftSunLight = new THREE.PointLight("#ffffff", 10);
     this.leftSunLight.castShadow = true;
     this.leftSunLight.shadow.camera.far = 15;
     this.leftSunLight.shadow.mapSize.set(1024, 1024);

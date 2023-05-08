@@ -40,12 +40,19 @@ export default class Experience {
     // Labels
     this.points = [
       {
-        position: new THREE.Vector3(5.6, -1.1, 0),
+        // Violin label
+        position: new THREE.Vector3(5.55, -1.1, 0),
         element: document.querySelector(".point-0"),
       },
       {
-        position: new THREE.Vector3(7.1, -0.1, 0),
+        // "Program" label
+        position: new THREE.Vector3(7.05, -0.21, 0),
         element: document.querySelector(".point-1"),
+      },
+      {
+        // Ableton label
+        position: new THREE.Vector3(8.8, 0.81, 0),
+        element: document.querySelector(".point-2"),
       },
     ];
 

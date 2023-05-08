@@ -29,4 +29,9 @@ export default [
     type: "gltfModel",
     path: "models/program.glb",
   },
+  {
+    name: "abletonModel",
+    type: "gltfModel",
+    path: "models/ableton.glb",
+  },
 ];

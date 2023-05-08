@@ -7,7 +7,7 @@ export default class Camera {
     this.sizes = this.experience.sizes;
     this.scene = this.experience.scene;
     this.canvas = this.experience.canvas;
-    this.light = new THREE.PointLight("#ffffff", 10);
+    this.light = new THREE.PointLight("#ffffff", 15);
     this.scene.add(this.light);
 
     this.setInstance();

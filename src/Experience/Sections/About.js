@@ -12,9 +12,11 @@ export default class About {
     this.time = this.experience.time;
 
     // Resources
+    this.font = this.resources.items.sectionFont;
     this.violin = this.resources.items.violinModel;
     this.program = this.resources.items.programModel;
-    this.font = this.resources.items.sectionFont;
+    this.ableton = this.resources.items.abletonModel;
+    
 
     // 3D "About me" text
     const textGeometry = new TextGeometry("About me", {
@@ -52,13 +54,25 @@ export default class About {
     this.programModel.position.set(7.3, -0.5, 0.5);
     this.programModel.rotation.set(Math.PI / 2, 0, Math.PI / 12);
     this.scene.add(this.programModel);
+
+    this.abletonModel = this.ableton.scene;
+    this.abletonModel.scale.set(0.4, 0.4, 0.4);
+    this.abletonModel.position.set(8.9, 0.5, 0.5);
+    this.abletonModel.rotation.set(Math.PI / 2, 0, Math.PI / 12);
+    this.scene.add(this.abletonModel);
   }
 
   breathe() {
     this.violinModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 2;
     this.violinModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
+    this.violinModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 4;
 
     this.programModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
     this.programModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
+    this.programModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 12;
+
+    this.abletonModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 0.5;
+    this.abletonModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
+    this.abletonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 12;
   }
 }
