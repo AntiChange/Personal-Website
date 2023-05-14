@@ -18,7 +18,7 @@ export default class TrebleClef {
   setModel() {
     this.model = this.resource.scene;
     this.model.scale.set(2, 2, 2);
-    this.model.position.set(0, 0.5, 0);
+    this.model.position.set(0, 0.5, 1);
     this.model.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.model);
 
