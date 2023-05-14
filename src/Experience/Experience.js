@@ -59,6 +59,11 @@ export default class Experience {
         position: new THREE.Vector3(10.0, 1.85, 0),
         element: document.querySelector(".point-3"),
       },
+      {
+        // Postalgia label
+        position: new THREE.Vector3(12.8, -0.6, 0),
+        element: document.querySelector(".point-4"),
+      },
     ];
 
     // Resize event
