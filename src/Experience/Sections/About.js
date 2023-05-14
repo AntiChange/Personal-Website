@@ -55,10 +55,11 @@ export default class About {
     this.programModel.rotation.set(Math.PI / 2, 0, Math.PI / 12);
     this.scene.add(this.programModel);
 
+    // Ableton Model
     this.abletonModel = this.ableton.scene;
     this.abletonModel.scale.set(0.4, 0.4, 0.4);
     this.abletonModel.position.set(8.9, 0.5, 0.5);
-    this.abletonModel.rotation.set(Math.PI / 2, 0, Math.PI / 12);
+    this.abletonModel.rotation.set(Math.PI / 2, 0, Math.PI / 24);
     this.scene.add(this.abletonModel);
   }
 
@@ -73,6 +74,6 @@ export default class About {
 
     this.abletonModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 0.5;
     this.abletonModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
-    this.abletonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 12;
+    this.abletonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
   }
 }

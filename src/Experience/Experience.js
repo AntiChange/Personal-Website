@@ -51,7 +51,7 @@ export default class Experience {
       },
       {
         // Ableton label
-        position: new THREE.Vector3(8.8, 0.81, 0),
+        position: new THREE.Vector3(8.6, 0.81, 0),
         element: document.querySelector(".point-2"),
       },
     ];
@@ -82,7 +82,7 @@ export default class Experience {
       const screenPosition = point.position.clone();
       screenPosition.project(this.camera.instance);
 
-      const translateX = screenPosition.x * this.sizes.width * 0.5;
+      const translateX = screenPosition.x * this.sizes.width * 0.524;
       const translateY =
         -(screenPosition.y * this.sizes.height * 0.5) + this.scroll.scrollY;
 
