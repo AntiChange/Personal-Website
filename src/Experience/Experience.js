@@ -64,6 +64,11 @@ export default class Experience {
         position: new THREE.Vector3(12.8, -0.6, 0),
         element: document.querySelector(".point-4"),
       },
+      {
+        // Jobox label
+        position: new THREE.Vector3(14.8, 0.5, 0),
+        element: document.querySelector(".point-5"),
+      },
     ];
 
     // Resize event

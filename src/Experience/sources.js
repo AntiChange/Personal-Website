@@ -44,4 +44,9 @@ export default [
     type: "gltfModel",
     path: "models/postalgia.glb",
   },
+  {
+    name: "joboxModel",
+    type: "gltfModel",
+    path: "models/jobox.glb",
+  },
 ];
