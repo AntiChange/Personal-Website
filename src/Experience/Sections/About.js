@@ -16,6 +16,7 @@ export default class About {
     this.violin = this.resources.items.violinModel;
     this.program = this.resources.items.programModel;
     this.ableton = this.resources.items.abletonModel;
+    this.youtube = this.resources.items.youtubeModel;
     
 
     // 3D "About me" text
@@ -61,6 +62,13 @@ export default class About {
     this.abletonModel.position.set(8.9, 0.5, 0.5);
     this.abletonModel.rotation.set(Math.PI / 2, 0, Math.PI / 24);
     this.scene.add(this.abletonModel);
+
+    // Youtube Model
+    this.youtubeModel = this.youtube.scene;
+    this.youtubeModel.scale.set(0.045, 0.045, 0.045);
+    this.youtubeModel.position.set(10.4, 1.0, 0.5);
+    this.youtubeModel.rotation.set(0, Math.PI / 24, -Math.PI / 12);
+    this.scene.add(this.youtubeModel);
   }
 
   breathe() {
@@ -75,5 +83,9 @@ export default class About {
     this.abletonModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 0.5;
     this.abletonModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
     this.abletonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
+    
+    this.youtubeModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
+    this.youtubeModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
+    this.youtubeModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 12;
   }
 }

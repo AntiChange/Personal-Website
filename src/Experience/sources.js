@@ -34,4 +34,9 @@ export default [
     type: "gltfModel",
     path: "models/ableton.glb",
   },
+  {
+    name: "youtubeModel",
+    type: "gltfModel",
+    path: "models/youtube.glb",
+  },
 ];

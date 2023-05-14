@@ -54,6 +54,11 @@ export default class Experience {
         position: new THREE.Vector3(8.6, 0.81, 0),
         element: document.querySelector(".point-2"),
       },
+      {
+        // Youtube label
+        position: new THREE.Vector3(10.1, 1.81, 0),
+        element: document.querySelector(".point-3"),
+      },
     ];
 
     // Resize event
