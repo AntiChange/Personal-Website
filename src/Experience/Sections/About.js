@@ -23,7 +23,7 @@ export default class About {
     const textGeometry = new TextGeometry("About me", {
       font: this.font,
       size: 0.3,
-      height: 0.1,
+      height: 0.02,
       curveSegments: 12,
       bevelEnabled: true,
       bevelThickness: 0.03,

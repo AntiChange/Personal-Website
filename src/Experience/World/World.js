@@ -3,6 +3,7 @@ import Environment from "./Environment.js";
 import TrebleClef from "./TrebleClef.js";
 import Staff from "./Staff.js";
 import About from "../Sections/About.js";
+import WorkExperience from "../Sections/WorkExperience.js";
 
 export default class World {
   constructor() {
@@ -17,6 +18,7 @@ export default class World {
       this.staff = new Staff();
       this.environment = new Environment();
       this.about = new About();
+      this.WorkExperience = new WorkExperience();
 
       // Initial animation once loaded
       if (this.trebleclef) this.trebleclef.playAnimation();
