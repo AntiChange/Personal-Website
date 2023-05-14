@@ -18,7 +18,7 @@ export default class World {
       this.staff = new Staff();
       this.environment = new Environment();
       this.about = new About();
-      this.WorkExperience = new WorkExperience();
+      this.workexperience = new WorkExperience();
 
       // Initial animation once loaded
       if (this.trebleclef) this.trebleclef.playAnimation();
@@ -30,5 +30,6 @@ export default class World {
     if (this.trebleclef) this.trebleclef.breathe();
     if (this.staff) this.staff.breathe();
     if (this.about) this.about.breathe();
+    if (this.workexperience) this.workexperience.breathe();
   }
 }

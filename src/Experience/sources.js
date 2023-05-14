@@ -39,4 +39,9 @@ export default [
     type: "gltfModel",
     path: "models/youtube.glb",
   },
+  {
+    name: "postalgiaModel",
+    type: "gltfModel",
+    path: "models/postalgia.glb",
+  },
 ];

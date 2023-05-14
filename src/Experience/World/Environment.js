@@ -33,7 +33,7 @@ export default class Environment {
 
     this.scene.add(this.rightSunLight, this.leftSunLight);
 
-    this.ambientLight = new THREE.AmbientLight("#ffffff", 1000);
+    this.ambientLight = new THREE.AmbientLight("#ffffff", 1);
     this.scene.add(this.ambientLight);
 
     // Debug

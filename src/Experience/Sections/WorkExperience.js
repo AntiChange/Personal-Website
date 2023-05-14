@@ -13,6 +13,7 @@ export default class WorkExperience {
 
     // Resources
     this.font = this.resources.items.sectionFont;
+    this.postalgia = this.resources.items.postalgiaModel;
 
     // 3D "Work experience" text
     const textGeometry = new TextGeometry("Work experience", {
@@ -34,5 +35,20 @@ export default class WorkExperience {
 
     // Models
     this.setModel();
+  }
+
+  setModel() {
+    // Postalgia Model
+    this.postalgiaModel = this.postalgia.scene;
+    this.postalgiaModel.scale.set(0.2, 0.2, 0.2);
+    this.postalgiaModel.position.set(13.2, -1.0, 0.5);
+    this.postalgiaModel.rotation.set(Math.PI / 2, 0, -Math.PI / 24);
+    this.scene.add(this.postalgiaModel);
+  }
+
+  breathe() {
+    this.postalgiaModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 1.0;
+    this.postalgiaModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
+    this.postalgiaModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
   }
 }
