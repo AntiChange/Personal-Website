@@ -15,6 +15,7 @@ export default class WorkExperience {
     this.font = this.resources.items.sectionFont;
     this.postalgia = this.resources.items.postalgiaModel;
     this.jobox = this.resources.items.joboxModel;
+    this.pixlee = this.resources.items.pixleeModel;
 
     // 3D "Work experience" text
     const textGeometry = new TextGeometry("Work experience", {
@@ -52,6 +53,18 @@ export default class WorkExperience {
     this.joboxModel.position.set(14.6, -0.5, 0.5);
     this.joboxModel.rotation.set(Math.PI / 2, 0, -Math.PI / 24);
     this.scene.add(this.joboxModel);
+
+    // Pixlee Model
+    this.pixleeModel = this.pixlee.scene;
+    this.pixleeModel.scale.set(0.5, 0.5, 0.5);
+    this.pixleeModel.position.set(17.3, 1.1, 0.5);
+    this.pixleeModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.pixleeModel);
+
+    // Additional light for Pixlee tile - it's a bit dim. 
+    this.pixleeLight = new THREE.PointLight("#ffffff", 0.2);
+    this.pixleeLight.position.set(18.8, 0.9, 6.8)
+    this.scene.add(this.pixleeLight);
   }
 
   breathe() {
@@ -62,5 +75,9 @@ export default class WorkExperience {
     this.joboxModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
     this.joboxModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
     this.joboxModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
+
+    this.pixleeModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 1.1;
+    this.pixleeModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
+    this.pixleeModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
   }
 }

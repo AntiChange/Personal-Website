@@ -49,4 +49,9 @@ export default [
     type: "gltfModel",
     path: "models/jobox.glb",
   },
+  {
+    name: "pixleeModel",
+    type: "gltfModel",
+    path: "models/pixlee.glb",
+  },
 ];
