@@ -57,7 +57,7 @@ export default class WorkExperience {
     // Pixlee Model
     this.pixleeModel = this.pixlee.scene;
     this.pixleeModel.scale.set(0.5, 0.5, 0.5);
-    this.pixleeModel.position.set(17.3, 1.1, 0.5);
+    this.pixleeModel.position.set(17.3, 1.0, 0.5);
     this.pixleeModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.pixleeModel);
 
@@ -76,7 +76,7 @@ export default class WorkExperience {
     this.joboxModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
     this.joboxModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
 
-    this.pixleeModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 1.1;
+    this.pixleeModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
     this.pixleeModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
     this.pixleeModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
   }

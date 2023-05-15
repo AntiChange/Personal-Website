@@ -69,6 +69,11 @@ export default class Experience {
         position: new THREE.Vector3(14.8, 0.5, 0),
         element: document.querySelector(".point-5"),
       },
+      {
+        // Pixlee label
+        position: new THREE.Vector3(16.9, 1.5, 0),
+        element: document.querySelector(".point-6"),
+      },
     ];
 
     // Resize event
