@@ -61,23 +61,31 @@ export default class WorkExperience {
     this.pixleeModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.pixleeModel);
 
-    // Additional light for Pixlee tile - it's a bit dim. 
+    // Additional light for Pixlee tile - it's a bit dim.
     this.pixleeLight = new THREE.PointLight("#ffffff", 0.2);
-    this.pixleeLight.position.set(18.8, 0.9, 6.8)
+    this.pixleeLight.position.set(18.8, 0.9, 6.8);
     this.scene.add(this.pixleeLight);
   }
 
   breathe() {
-    this.postalgiaModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.9;
-    this.postalgiaModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
-    this.postalgiaModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
+    this.postalgiaModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 - 0.9;
+    this.postalgiaModel.rotation.x =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
+    this.postalgiaModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
 
     this.joboxModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
-    this.joboxModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
-    this.joboxModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
+    this.joboxModel.rotation.x =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
+    this.joboxModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
 
-    this.pixleeModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
-    this.pixleeModel.rotation.x = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
-    this.pixleeModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
+    this.pixleeModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
+    this.pixleeModel.rotation.x =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
+    this.pixleeModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
   }
 }

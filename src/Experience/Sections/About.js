@@ -17,7 +17,6 @@ export default class About {
     this.program = this.resources.items.programModel;
     this.ableton = this.resources.items.abletonModel;
     this.youtube = this.resources.items.youtubeModel;
-    
 
     // 3D "About me" text
     const textGeometry = new TextGeometry("About me", {
@@ -48,7 +47,7 @@ export default class About {
     this.violinModel.position.set(5.4, -2, 0.5);
     this.violinModel.rotation.set(-Math.PI / 12, 0, -Math.PI / 4);
     this.scene.add(this.violinModel);
-    
+
     // Program Model
     this.programModel = this.program.scene;
     this.programModel.scale.set(0.2, 0.2, 0.2);
@@ -74,18 +73,26 @@ export default class About {
   breathe() {
     this.violinModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 2;
     this.violinModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
-    this.violinModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 4;
+    this.violinModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 4;
 
-    this.programModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
+    this.programModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
     this.programModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
-    this.programModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 12;
+    this.programModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 12;
 
-    this.abletonModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 0.5;
+    this.abletonModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + 0.5;
     this.abletonModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
-    this.abletonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
-    
-    this.youtubeModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
-    this.youtubeModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
-    this.youtubeModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 12;
+    this.abletonModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
+
+    this.youtubeModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
+    this.youtubeModel.rotation.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 24;
+    this.youtubeModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 12;
   }
 }
