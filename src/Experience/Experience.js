@@ -41,37 +41,37 @@ export default class Experience {
     this.points = [
       {
         // Violin label
-        position: new THREE.Vector3(5.4, -1.15, 0),
+        position: new THREE.Vector3(5.4, -0.65, 0),
         element: document.querySelector(".point-0"),
       },
       {
         // "Program" label
-        position: new THREE.Vector3(6.95, -0.19, 0),
+        position: new THREE.Vector3(6.95, 0.44, 0),
         element: document.querySelector(".point-1"),
       },
       {
         // Ableton label
-        position: new THREE.Vector3(8.57, 0.9, 0),
+        position: new THREE.Vector3(8.57, 1.5, 0),
         element: document.querySelector(".point-2"),
       },
       {
         // Youtube label
-        position: new THREE.Vector3(10.0, 1.85, 0),
+        position: new THREE.Vector3(10.05, 2.39, 0),
         element: document.querySelector(".point-3"),
       },
       {
         // Postalgia label
-        position: new THREE.Vector3(12.8, -0.6, 0),
+        position: new THREE.Vector3(12.83, -0.1, 0),
         element: document.querySelector(".point-4"),
       },
       {
         // Jobox label
-        position: new THREE.Vector3(14.8, 0.5, 0),
+        position: new THREE.Vector3(14.8, 0.94, 0),
         element: document.querySelector(".point-5"),
       },
       {
         // Pixlee label
-        position: new THREE.Vector3(16.9, 1.5, 0),
+        position: new THREE.Vector3(16.9, 1.9, 0),
         element: document.querySelector(".point-6"),
       },
     ];

@@ -43,21 +43,21 @@ export default class WorkExperience {
     // Postalgia Model
     this.postalgiaModel = this.postalgia.scene;
     this.postalgiaModel.scale.set(0.2, 0.2, 0.2);
-    this.postalgiaModel.position.set(13.2, -0.9, 0.5);
+    this.postalgiaModel.position.set(13.2, -0.42, 0.5);
     this.postalgiaModel.rotation.set(Math.PI / 2, 0, -Math.PI / 24);
     this.scene.add(this.postalgiaModel);
 
     // Jobox Model
     this.joboxModel = this.jobox.scene;
     this.joboxModel.scale.set(0.2, 0.2, 0.2);
-    this.joboxModel.position.set(14.6, -0.5, 0.5);
+    this.joboxModel.position.set(14.6, 0, 0.5);
     this.joboxModel.rotation.set(Math.PI / 2, 0, -Math.PI / 24);
     this.scene.add(this.joboxModel);
 
     // Pixlee Model
     this.pixleeModel = this.pixlee.scene;
     this.pixleeModel.scale.set(0.5, 0.5, 0.5);
-    this.pixleeModel.position.set(17.3, 1.0, 0.5);
+    this.pixleeModel.position.set(17.3, 1.4, 0.5);
     this.pixleeModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.pixleeModel);
 
@@ -69,20 +69,20 @@ export default class WorkExperience {
 
   breathe() {
     this.postalgiaModel.position.y =
-      Math.cos(this.time.elapsed / 1000) * 0.1 - 0.9;
+      Math.cos(this.time.elapsed / 1000) * 0.1 - 0.42;
     this.postalgiaModel.rotation.x =
       Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
     this.postalgiaModel.rotation.z =
       Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
 
-    this.joboxModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0.5;
+    this.joboxModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 0;
     this.joboxModel.rotation.x =
       Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
     this.joboxModel.rotation.z =
       Math.cos(this.time.elapsed / 1000) * 0.2 - Math.PI / 24;
 
     this.pixleeModel.position.y =
-      Math.cos(this.time.elapsed / 1000) * 0.1 + 1.0;
+      Math.cos(this.time.elapsed / 1000) * 0.1 + 1.4;
     this.pixleeModel.rotation.x =
       Math.cos(this.time.elapsed / 1000) * 0.1 + Math.PI / 2;
     this.pixleeModel.rotation.z =
