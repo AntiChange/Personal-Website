@@ -74,6 +74,11 @@ export default class Experience {
         position: new THREE.Vector3(16.9, 1.9, 0),
         element: document.querySelector(".point-6"),
       },
+      {
+        // C# label
+        position: new THREE.Vector3(19.22, 0.9, 0),
+        element: document.querySelector(".point-7"),
+      },
     ];
 
     // Resize event

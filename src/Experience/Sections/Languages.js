@@ -13,6 +13,7 @@ export default class Languages {
 
     // Resources
     this.font = this.resources.items.sectionFont;
+    this.cSharp = this.resources.items.cSharpModel;
 
     // 3D "Languages" text
     const textGeometry = new TextGeometry("Languages", {
@@ -37,10 +38,15 @@ export default class Languages {
   }
   
   setModel() {
-  
+    // C Sharp Model
+    this.cSharpModel = this.cSharp.scene;
+    this.cSharpModel.scale.set(0.55, 0.55, 0.55);
+    this.cSharpModel.position.set(19.6, 0.5, 0.5);
+    this.cSharpModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
+    this.scene.add(this.cSharpModel);
   }
 
   breathe() {
-
+    this.cSharpModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 3 * Math.PI / 2;
   }
 }

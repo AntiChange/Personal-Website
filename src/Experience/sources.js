@@ -54,4 +54,9 @@ export default [
     type: "gltfModel",
     path: "models/pixlee.glb",
   },
+  {
+    name: "cSharpModel",
+    type: "gltfModel",
+    path: "models/cSharp.glb",
+  },
 ];
