@@ -14,6 +14,8 @@ export default class Languages {
     // Resources
     this.font = this.resources.items.sectionFont;
     this.cSharp = this.resources.items.cSharpModel;
+    this.cPlusPlus = this.resources.items.cPlusPlusModel;
+    this.c = this.resources.items.cModel;
 
     // 3D "Languages" text
     const textGeometry = new TextGeometry("Languages", {
@@ -38,15 +40,31 @@ export default class Languages {
   }
   
   setModel() {
-    // C Sharp Model
+    // C# Model
     this.cSharpModel = this.cSharp.scene;
-    this.cSharpModel.scale.set(0.55, 0.55, 0.55);
-    this.cSharpModel.position.set(19.6, 0.5, 0.5);
-    this.cSharpModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
+    this.cSharpModel.scale.set(0.6, 0.6, 0.6);
+    this.cSharpModel.position.set(19.6, 0.49, 0.5);
+    this.cSharpModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2 + Math.PI / 24);
     this.scene.add(this.cSharpModel);
+    
+    // C++ Model
+    this.cPlusPlusModel = this.cPlusPlus.scene;
+    this.cPlusPlusModel.scale.set(0.6, 0.6, 0.6);
+    this.cPlusPlusModel.position.set(19.6, -0.49, 0.5);
+    this.cPlusPlusModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
+    this.scene.add(this.cPlusPlusModel);
+    
+    // C Model
+    this.cModel = this.c.scene;
+    this.cModel.scale.set(0.6, 0.6, 0.6);
+    this.cModel.position.set(19.6, -1.45, 0.5);
+    this.cModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
+    this.scene.add(this.cModel);
   }
 
   breathe() {
-    this.cSharpModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1 + 3 * Math.PI / 2;
+    this.cSharpModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
+    this.cPlusPlusModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
+    this.cModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
   }
 }

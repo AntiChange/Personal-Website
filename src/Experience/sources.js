@@ -59,4 +59,14 @@ export default [
     type: "gltfModel",
     path: "models/cSharp.glb",
   },
+  {
+    name: "cPlusPlusModel",
+    type: "gltfModel",
+    path: "models/cPlusPlus.glb",
+  },
+  {
+    name: "cModel",
+    type: "gltfModel",
+    path: "models/c.glb",
+  },
 ];
