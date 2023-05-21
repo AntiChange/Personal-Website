@@ -17,6 +17,7 @@ export default class Languages {
     this.cPlusPlus = this.resources.items.cPlusPlusModel;
     this.c = this.resources.items.cModel;
     this.python = this.resources.items.pythonModel;
+    this.js = this.resources.items.jsModel;
 
     // 3D "Languages" text
     const textGeometry = new TextGeometry("Languages", {
@@ -68,6 +69,13 @@ export default class Languages {
     this.pythonModel.position.set(21.6, 1.4, 0.5);
     this.pythonModel.rotation.set(0, 0, 0);
     this.scene.add(this.pythonModel);
+    
+    // JS Model
+    this.jsModel = this.js.scene;
+    this.jsModel.scale.set(6.5, 6.5, 6.5);
+    this.jsModel.position.set(23.8, 1.0, 0.5);
+    this.jsModel.rotation.set(Math.PI / 2, -Math.PI / 2, Math.PI / 2);
+    this.scene.add(this.jsModel);
   }
 
   breathe() {
@@ -75,5 +83,6 @@ export default class Languages {
     this.cPlusPlusModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
     this.cModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
     this.pythonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.jsModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 - Math.PI / 2;
   }
 }

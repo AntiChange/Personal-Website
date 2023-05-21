@@ -74,4 +74,9 @@ export default [
     type: "gltfModel",
     path: "models/python.glb",
   },
+  {
+    name: "jsModel",
+    type: "gltfModel",
+    path: "models/js.glb",
+  },
 ];
