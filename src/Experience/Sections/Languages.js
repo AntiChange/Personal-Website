@@ -18,6 +18,8 @@ export default class Languages {
     this.c = this.resources.items.cModel;
     this.python = this.resources.items.pythonModel;
     this.js = this.resources.items.jsModel;
+    this.css = this.resources.items.cssModel;
+    this.html = this.resources.items.htmlModel;
 
     // 3D "Languages" text
     const textGeometry = new TextGeometry("Languages", {
@@ -76,6 +78,20 @@ export default class Languages {
     this.jsModel.position.set(23.8, 1.0, 0.5);
     this.jsModel.rotation.set(Math.PI / 2, -Math.PI / 2, Math.PI / 2);
     this.scene.add(this.jsModel);
+    
+    // CSS Model
+    this.cssModel = this.css.scene;
+    this.cssModel.scale.set(0.0055, 0.0055, 0.0055);
+    this.cssModel.position.set(23.8, -0.30, 0.5);
+    this.cssModel.rotation.set(0, 0, 0);
+    this.scene.add(this.cssModel);
+    
+    // HTML Model
+    this.htmlModel = this.html.scene;
+    this.htmlModel.scale.set(0.0055, 0.0055, 0.0055);
+    this.htmlModel.position.set(23.8, -1.75, 0.5);
+    this.htmlModel.rotation.set(0, 0, 0);
+    this.scene.add(this.htmlModel);
   }
 
   breathe() {
@@ -84,5 +100,7 @@ export default class Languages {
     this.cModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
     this.pythonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.jsModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 - Math.PI / 2;
+    this.cssModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.htmlModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
   }
 }

@@ -79,4 +79,14 @@ export default [
     type: "gltfModel",
     path: "models/js.glb",
   },
+  {
+    name: "cssModel",
+    type: "gltfModel",
+    path: "models/css.glb",
+  },
+  {
+    name: "htmlModel",
+    type: "gltfModel",
+    path: "models/html.glb",
+  },
 ];
