@@ -16,6 +16,7 @@ export default class Languages {
     this.cSharp = this.resources.items.cSharpModel;
     this.cPlusPlus = this.resources.items.cPlusPlusModel;
     this.c = this.resources.items.cModel;
+    this.python = this.resources.items.pythonModel;
 
     // 3D "Languages" text
     const textGeometry = new TextGeometry("Languages", {
@@ -43,28 +44,36 @@ export default class Languages {
     // C# Model
     this.cSharpModel = this.cSharp.scene;
     this.cSharpModel.scale.set(0.6, 0.6, 0.6);
-    this.cSharpModel.position.set(19.6, 0.49, 0.5);
+    this.cSharpModel.position.set(19.7, 0.49, 0.5);
     this.cSharpModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2 + Math.PI / 24);
     this.scene.add(this.cSharpModel);
     
     // C++ Model
     this.cPlusPlusModel = this.cPlusPlus.scene;
     this.cPlusPlusModel.scale.set(0.6, 0.6, 0.6);
-    this.cPlusPlusModel.position.set(19.6, -0.49, 0.5);
+    this.cPlusPlusModel.position.set(19.7, -0.49, 0.5);
     this.cPlusPlusModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
     this.scene.add(this.cPlusPlusModel);
     
     // C Model
     this.cModel = this.c.scene;
     this.cModel.scale.set(0.6, 0.6, 0.6);
-    this.cModel.position.set(19.6, -1.45, 0.5);
+    this.cModel.position.set(19.7, -1.45, 0.5);
     this.cModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
     this.scene.add(this.cModel);
+    
+    // Python Model
+    this.pythonModel = this.python.scene;
+    this.pythonModel.scale.set(0.015, 0.015, 0.015);
+    this.pythonModel.position.set(21.6, 1.4, 0.5);
+    this.pythonModel.rotation.set(0, 0, 0);
+    this.scene.add(this.pythonModel);
   }
 
   breathe() {
     this.cSharpModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
     this.cPlusPlusModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
     this.cModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
+    this.pythonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
   }
 }

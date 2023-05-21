@@ -69,4 +69,9 @@ export default [
     type: "gltfModel",
     path: "models/c.glb",
   },
+  {
+    name: "pythonModel",
+    type: "gltfModel",
+    path: "models/python.glb",
+  },
 ];

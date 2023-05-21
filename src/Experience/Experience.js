@@ -76,18 +76,23 @@ export default class Experience {
       },
       {
         // C# label
-        position: new THREE.Vector3(19.2, 0.95, 0),
+        position: new THREE.Vector3(19.3, 0.95, 0),
         element: document.querySelector(".point-7"),
       },
       {
         // C++ label
-        position: new THREE.Vector3(19.2, -0.1, 0),
+        position: new THREE.Vector3(19.3, -0.1, 0),
         element: document.querySelector(".point-8"),
       },
       {
         // C label
-        position: new THREE.Vector3(19.2, -1.15, 0),
+        position: new THREE.Vector3(19.3, -1.15, 0),
         element: document.querySelector(".point-9"),
+      },
+      {
+        // Python label
+        position: new THREE.Vector3(21.2, 1.9, 0),
+        element: document.querySelector(".point-10"),
       },
     ];
 
