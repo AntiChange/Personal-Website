@@ -43,57 +43,65 @@ export default class Languages {
     // Models
     this.setModel();
   }
-  
+
   setModel() {
     // C# Model
     this.cSharpModel = this.cSharp.scene;
     this.cSharpModel.scale.set(0.6, 0.6, 0.6);
     this.cSharpModel.position.set(19.7, 0.49, 0.5);
-    this.cSharpModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2 + Math.PI / 24);
+    this.cSharpModel.rotation.set(
+      Math.PI / 2,
+      (3 * Math.PI) / 2,
+      Math.PI / 2 + Math.PI / 24
+    );
     this.scene.add(this.cSharpModel);
-    
+
     // C++ Model
     this.cPlusPlusModel = this.cPlusPlus.scene;
     this.cPlusPlusModel.scale.set(0.6, 0.6, 0.6);
     this.cPlusPlusModel.position.set(19.7, -0.49, 0.5);
-    this.cPlusPlusModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
+    this.cPlusPlusModel.rotation.set(
+      Math.PI / 2,
+      (3 * Math.PI) / 2,
+      Math.PI / 2
+    );
     this.scene.add(this.cPlusPlusModel);
-    
+
     // C Model
     this.cModel = this.c.scene;
     this.cModel.scale.set(0.6, 0.6, 0.6);
     this.cModel.position.set(19.7, -1.45, 0.5);
-    this.cModel.rotation.set(Math.PI / 2, 3 * Math.PI / 2, Math.PI / 2);
+    this.cModel.rotation.set(Math.PI / 2, (3 * Math.PI) / 2, Math.PI / 2);
     this.scene.add(this.cModel);
-    
+
     // Python Model
     this.pythonModel = this.python.scene;
     this.pythonModel.scale.set(0.015, 0.015, 0.015);
     this.pythonModel.position.set(21.6, 1.4, 0.5);
     this.pythonModel.rotation.set(0, 0, 0);
     this.scene.add(this.pythonModel);
-    
+
     // JS Model
     this.jsModel = this.js.scene;
     this.jsModel.scale.set(6.5, 6.5, 6.5);
     this.jsModel.position.set(23.8, 1.0, 0.5);
     this.jsModel.rotation.set(Math.PI / 2, -Math.PI / 2, Math.PI / 2);
     this.scene.add(this.jsModel);
-    
+
     // CSS Model
     this.cssModel = this.css.scene;
     this.cssModel.scale.set(0.0055, 0.0055, 0.0055);
-    this.cssModel.position.set(23.8, -0.30, 0.5);
+    this.cssModel.position.set(23.8, -0.3, 0.5);
     this.cssModel.rotation.set(0, 0, 0);
     this.scene.add(this.cssModel);
-    
+
     // HTML Model
     this.htmlModel = this.html.scene;
     this.htmlModel.scale.set(0.0055, 0.0055, 0.0055);
     this.htmlModel.position.set(23.8, -1.75, 0.5);
     this.htmlModel.rotation.set(0, 0, 0);
     this.scene.add(this.htmlModel);
-    
+
     // SQL Model
     this.sqlModel = this.sql.scene;
     this.sqlModel.scale.set(0.24, 0.24, 0.24);
@@ -103,11 +111,15 @@ export default class Languages {
   }
 
   breathe() {
-    this.cSharpModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
-    this.cPlusPlusModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
-    this.cModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 + 3 * Math.PI / 2;
+    this.cSharpModel.rotation.y =
+      Math.cos(this.time.elapsed / 1000) * 0.3 + (3 * Math.PI) / 2;
+    this.cPlusPlusModel.rotation.y =
+      Math.cos(this.time.elapsed / 1000) * 0.3 + (3 * Math.PI) / 2;
+    this.cModel.rotation.y =
+      Math.cos(this.time.elapsed / 1000) * 0.3 + (3 * Math.PI) / 2;
     this.pythonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
-    this.jsModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 - Math.PI / 2;
+    this.jsModel.rotation.y =
+      Math.cos(this.time.elapsed / 1000) * 0.3 - Math.PI / 2;
     this.cssModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.htmlModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.sqlModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3;

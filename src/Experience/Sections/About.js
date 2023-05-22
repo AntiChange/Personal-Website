@@ -71,7 +71,8 @@ export default class About {
   }
 
   breathe() {
-    this.violinModel.position.y = Math.cos(this.time.elapsed / 1000) * 0.1 - 1.3;
+    this.violinModel.position.y =
+      Math.cos(this.time.elapsed / 1000) * 0.1 - 1.3;
     this.violinModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.1;
     this.violinModel.rotation.z =
       Math.cos(this.time.elapsed / 1000) * 0.1 - Math.PI / 4;

@@ -5,6 +5,7 @@ import Staff from "./Staff.js";
 import About from "../Sections/About.js";
 import WorkExperience from "../Sections/WorkExperience.js";
 import Languages from "../Sections/Languages.js";
+import Technologies from "../Sections/Technologies.js";
 
 export default class World {
   constructor() {
@@ -21,6 +22,7 @@ export default class World {
       this.about = new About();
       this.workexperience = new WorkExperience();
       this.languages = new Languages();
+      this.technologies = new Technologies();
 
       // Initial animation once loaded
       if (this.trebleclef) this.trebleclef.playAnimation();
@@ -34,5 +36,6 @@ export default class World {
     if (this.about) this.about.breathe();
     if (this.workexperience) this.workexperience.breathe();
     if (this.languages) this.languages.breathe();
+    if (this.technologies) this.technologies.breathe();
   }
 }
