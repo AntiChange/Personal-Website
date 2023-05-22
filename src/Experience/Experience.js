@@ -121,8 +121,13 @@ export default class Experience {
       },
       {
         // ThreeJS label
-        position: new THREE.Vector3(28.55, 0.4, 0),
+        position: new THREE.Vector3(28.65, 0.4, 0),
         element: document.querySelector(".point-16"),
+      },
+      {
+        // Github label
+        position: new THREE.Vector3(30.6, 1.45, 0),
+        element: document.querySelector(".point-17"),
       },
     ];
 

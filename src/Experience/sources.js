@@ -104,4 +104,9 @@ export default [
     type: "gltfModel",
     path: "models/threejs.glb",
   },
+  {
+    name: "githubModel",
+    type: "gltfModel",
+    path: "models/github.glb",
+  },
 ];
