@@ -14,6 +14,7 @@ export default class Technologies {
     // Resources
     this.font = this.resources.items.sectionFont;
     this.react = this.resources.items.reactModel;
+    this.threejs = this.resources.items.threejsModel;
 
     // 3D "Technologies" text
     const textGeometry = new TextGeometry("Technologies", {
@@ -44,9 +45,17 @@ export default class Technologies {
     this.reactModel.position.set(29.0, -1.85, 0.5);
     this.reactModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.reactModel);
+    
+    // ThreeJS Model
+    this.threejsModel = this.threejs.scene;
+    this.threejsModel.scale.set(0.27, 0.27, 0.27);
+    this.threejsModel.position.set(29.0, 0, 0.5);
+    this.threejsModel.rotation.set(Math.PI / 2, 0, Math.PI / 24);
+    this.scene.add(this.threejsModel);
   }
 
   breathe() {
-      this.reactModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.reactModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.threejsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3 + Math.PI / 24;
   }
 }

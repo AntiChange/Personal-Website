@@ -99,4 +99,9 @@ export default [
     type: "gltfModel",
     path: "models/react.glb",
   },
+  {
+    name: "threejsModel",
+    type: "gltfModel",
+    path: "models/threejs.glb",
+  },
 ];
