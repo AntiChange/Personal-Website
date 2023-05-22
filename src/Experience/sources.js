@@ -94,4 +94,9 @@ export default [
     type: "gltfModel",
     path: "models/sql.glb",
   },
+  {
+    name: "reactModel",
+    type: "gltfModel",
+    path: "models/react.glb",
+  },
 ];

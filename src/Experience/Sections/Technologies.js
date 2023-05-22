@@ -13,6 +13,7 @@ export default class Technologies {
 
     // Resources
     this.font = this.resources.items.sectionFont;
+    this.react = this.resources.items.reactModel;
 
     // 3D "Technologies" text
     const textGeometry = new TextGeometry("Technologies", {
@@ -36,7 +37,16 @@ export default class Technologies {
     this.setModel();
   }
 
-  setModel() {}
+  setModel() {
+    // React Model
+    this.reactModel = this.react.scene;
+    this.reactModel.scale.set(0.25, 0.25, 0.25);
+    this.reactModel.position.set(29.0, -1.85, 0.5);
+    this.reactModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.reactModel);
+  }
 
-  breathe() {}
+  breathe() {
+      this.reactModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+  }
 }
