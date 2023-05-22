@@ -1,7 +1,8 @@
+Unless stated below, all models were created myself using blender.
 [3D violin created by VishnuR](https://www.turbosquid.com/3d-models/3d-old-violin-1722479)
 [Youtube Logo by Marina Karatkevich](https://dribbble.com/shots/15012871-YouTube-Logo-3D-Free-Blender-Model)
 [C/C++/C# Models (edited) originally from IconScout](https://iconscout.com/3d/c-plus-plus-5728486)
 [Python Model by AnshiNoWara](https://sketchfab.com/3d-models/python-8be4a2579dd84586b915068e475073ee)
 [JS Model (edited) originally by Fahrul Saputra](https://iconscout.com/3d/javascript-logo-6563586)
 [CSS Model by Erik Egnatosyan](https://sketchfab.com/3d-models/css-logo-3d-model-17b34c2b98714c6799544939f476eed3#download)
-[HTML Model by Erik Egnatosyan] (https://sketchfab.com/3d-models/html-logo-3d-model-ab8b32cab3364027ab00a033a0b2ff38)
+[HTML Model by Erik Egnatosyan](https://sketchfab.com/3d-models/html-logo-3d-model-ab8b32cab3364027ab00a033a0b2ff38)

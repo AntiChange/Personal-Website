@@ -20,6 +20,7 @@ export default class Languages {
     this.js = this.resources.items.jsModel;
     this.css = this.resources.items.cssModel;
     this.html = this.resources.items.htmlModel;
+    this.sql = this.resources.items.sqlModel;
 
     // 3D "Languages" text
     const textGeometry = new TextGeometry("Languages", {
@@ -92,6 +93,13 @@ export default class Languages {
     this.htmlModel.position.set(23.8, -1.75, 0.5);
     this.htmlModel.rotation.set(0, 0, 0);
     this.scene.add(this.htmlModel);
+    
+    // SQL Model
+    this.sqlModel = this.sql.scene;
+    this.sqlModel.scale.set(0.24, 0.24, 0.24);
+    this.sqlModel.position.set(25.9, 0.5, 0.5);
+    this.sqlModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.sqlModel);
   }
 
   breathe() {
@@ -102,5 +110,6 @@ export default class Languages {
     this.jsModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3 - Math.PI / 2;
     this.cssModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.htmlModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.sqlModel.rotation.y = Math.cos(this.time.elapsed / 1000) * 0.3;
   }
 }

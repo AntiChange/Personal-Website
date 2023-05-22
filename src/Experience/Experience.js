@@ -109,6 +109,11 @@ export default class Experience {
         position: new THREE.Vector3(23.4, -1.1, 0),
         element: document.querySelector(".point-13"),
       },
+      {
+        // SQL label
+        position: new THREE.Vector3(25.51, 0.95, 0),
+        element: document.querySelector(".point-14"),
+      },
     ];
 
     // Resize event

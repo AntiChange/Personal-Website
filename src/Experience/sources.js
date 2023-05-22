@@ -89,4 +89,9 @@ export default [
     type: "gltfModel",
     path: "models/html.glb",
   },
+  {
+    name: "sqlModel",
+    type: "gltfModel",
+    path: "models/sql.glb",
+  },
 ];
