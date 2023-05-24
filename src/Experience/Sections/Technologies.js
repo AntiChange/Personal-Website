@@ -16,6 +16,7 @@ export default class Technologies {
     this.react = this.resources.items.reactModel;
     this.threejs = this.resources.items.threejsModel;
     this.github = this.resources.items.githubModel;
+    this.postgres = this.resources.items.postgresModel;
 
     // 3D "Technologies" text
     const textGeometry = new TextGeometry("Technologies", {
@@ -60,11 +61,19 @@ export default class Technologies {
     this.githubModel.position.set(31.0, 1, 0.5);
     this.githubModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.githubModel);
+    
+    // Postgres Model
+    this.postgresModel = this.postgres.scene;
+    this.postgresModel.scale.set(0.23, 0.23, 0.23);
+    this.postgresModel.position.set(33.0, -0.5, 0.5);
+    this.postgresModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.postgresModel);
   }
 
   breathe() {
     this.reactModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.threejsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3 + Math.PI / 24;
     this.githubModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.postgresModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
   }
 }

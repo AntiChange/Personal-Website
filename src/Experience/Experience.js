@@ -134,6 +134,11 @@ export default class Experience {
         position: new THREE.Vector3(21.2, 0, 0),
         element: document.querySelector(".point-18"),
       },
+      {
+        // Postgres label
+        position: new THREE.Vector3(32.7, -0.1, 0),
+        element: document.querySelector(".point-19"),
+      },
     ];
 
     // Resize event

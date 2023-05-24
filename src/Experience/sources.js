@@ -114,4 +114,9 @@ export default [
     type: "gltfModel",
     path: "models/java.glb",
   },
+  {
+    name: "postgresModel",
+    type: "gltfModel",
+    path: "models/postgres.glb",
+  },
 ];
