@@ -17,6 +17,7 @@ export default class Languages {
     this.cPlusPlus = this.resources.items.cPlusPlusModel;
     this.c = this.resources.items.cModel;
     this.python = this.resources.items.pythonModel;
+    this.java = this.resources.items.javaModel;
     this.js = this.resources.items.jsModel;
     this.css = this.resources.items.cssModel;
     this.html = this.resources.items.htmlModel;
@@ -81,6 +82,13 @@ export default class Languages {
     this.pythonModel.rotation.set(0, 0, 0);
     this.scene.add(this.pythonModel);
 
+    // Java Model
+    this.javaModel = this.java.scene;
+    this.javaModel.scale.set(0.4, 0.4, 0.4);
+    this.javaModel.position.set(21.6, -0.5, 0.5);
+    this.javaModel.rotation.set(0, 0, 0);
+    this.scene.add(this.javaModel);
+
     // JS Model
     this.jsModel = this.js.scene;
     this.jsModel.scale.set(6.5, 6.5, 6.5);
@@ -118,6 +126,7 @@ export default class Languages {
     this.cModel.rotation.y =
       Math.cos(this.time.elapsed / 1000) * 0.3 + (3 * Math.PI) / 2;
     this.pythonModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.javaModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2;
     this.jsModel.rotation.y =
       Math.cos(this.time.elapsed / 1000) * 0.3 - Math.PI / 2;
     this.cssModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;

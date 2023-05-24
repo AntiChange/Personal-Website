@@ -109,4 +109,9 @@ export default [
     type: "gltfModel",
     path: "models/github.glb",
   },
+  {
+    name: "javaModel",
+    type: "gltfModel",
+    path: "models/java.glb",
+  },
 ];

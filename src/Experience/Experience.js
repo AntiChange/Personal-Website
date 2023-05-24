@@ -129,6 +129,11 @@ export default class Experience {
         position: new THREE.Vector3(30.6, 1.45, 0),
         element: document.querySelector(".point-17"),
       },
+      {
+        // Java label
+        position: new THREE.Vector3(21.2, 0, 0),
+        element: document.querySelector(".point-18"),
+      },
     ];
 
     // Resize event

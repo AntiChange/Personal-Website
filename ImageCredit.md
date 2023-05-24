@@ -7,3 +7,4 @@ Unless stated below, all models were created myself using blender.
 [CSS Model by Erik Egnatosyan](https://sketchfab.com/3d-models/css-logo-3d-model-17b34c2b98714c6799544939f476eed3#download)
 [HTML Model by Erik Egnatosyan](https://sketchfab.com/3d-models/html-logo-3d-model-ab8b32cab3364027ab00a033a0b2ff38)
 [React Model by xenadus](https://sketchfab.com/3d-models/react-logo-76174ceeba96487f9863f974636f641e)
+[Java Model by PhantomXD](https://sketchfab.com/3d-models/java-442de0f1b8a54966bc16466b329105af)
