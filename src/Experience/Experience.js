@@ -139,6 +139,11 @@ export default class Experience {
         position: new THREE.Vector3(32.7, -0.1, 0),
         element: document.querySelector(".point-19"),
       },
+      {
+        // MongoDB label
+        position: new THREE.Vector3(32.7, 1.45, 0),
+        element: document.querySelector(".point-20"),
+      },
     ];
 
     // Resize event

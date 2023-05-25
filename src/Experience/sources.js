@@ -119,4 +119,9 @@ export default [
     type: "gltfModel",
     path: "models/postgres.glb",
   },
+  {
+    name: "mongodbModel",
+    type: "gltfModel",
+    path: "models/mongodb.glb",
+  },
 ];
