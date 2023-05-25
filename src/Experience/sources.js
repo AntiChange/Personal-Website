@@ -124,4 +124,9 @@ export default [
     type: "gltfModel",
     path: "models/mongodb.glb",
   },
+  {
+    name: "unityModel",
+    type: "gltfModel",
+    path: "models/unity.glb",
+  },
 ];

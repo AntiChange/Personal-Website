@@ -144,6 +144,11 @@ export default class Experience {
         position: new THREE.Vector3(32.7, 1.45, 0),
         element: document.querySelector(".point-20"),
       },
+      {
+        // Unity label
+        position: new THREE.Vector3(34.8, 0.95, 0),
+        element: document.querySelector(".point-21"),
+      },
     ];
 
     // Resize event
