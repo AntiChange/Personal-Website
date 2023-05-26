@@ -129,4 +129,9 @@ export default [
     type: "gltfModel",
     path: "models/unity.glb",
   },
+  {
+    name: "nodejsModel",
+    type: "gltfModel",
+    path: "models/nodejs.glb",
+  },
 ];

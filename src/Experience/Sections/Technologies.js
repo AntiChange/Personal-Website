@@ -19,6 +19,7 @@ export default class Technologies {
     this.postgres = this.resources.items.postgresModel;
     this.mongodb = this.resources.items.mongodbModel;
     this.unity = this.resources.items.unityModel;
+    this.nodejs = this.resources.items.nodejsModel;
 
     // 3D "Technologies" text
     const textGeometry = new TextGeometry("Technologies", {
@@ -84,6 +85,13 @@ export default class Technologies {
     this.unityModel.position.set(35.05, 0.5, 0.5);
     this.unityModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.unityModel);
+    
+    // NodeJS Model
+    this.nodejsModel = this.nodejs.scene;
+    this.nodejsModel.scale.set(0.2, 0.2, 0.2);
+    this.nodejsModel.position.set(37.05, 1.0, 0.5);
+    this.nodejsModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.nodejsModel);
   }
 
   breathe() {
@@ -93,5 +101,6 @@ export default class Technologies {
     this.postgresModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.mongodbModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.unityModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.nodejsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
   }
 }
