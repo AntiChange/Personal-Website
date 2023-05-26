@@ -21,6 +21,7 @@ export default class Technologies {
     this.unity = this.resources.items.unityModel;
     this.nodejs = this.resources.items.nodejsModel;
     this.aws = this.resources.items.awsModel;
+    this.rails = this.resources.items.railsModel;
 
     // 3D "Technologies" text
     const textGeometry = new TextGeometry("Technologies", {
@@ -100,6 +101,13 @@ export default class Technologies {
     this.awsModel.position.set(37.05, -1.4, 0.5);
     this.awsModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.awsModel);
+    
+    // Rails Model
+    this.railsModel = this.rails.scene;
+    this.railsModel.scale.set(0.2, 0.2, 0.2);
+    this.railsModel.position.set(37.05, -2.3, 0.5);
+    this.railsModel.rotation.set(Math.PI / 2 - 0.25, 0, 0);
+    this.scene.add(this.railsModel);
   }
 
   breathe() {
@@ -111,5 +119,6 @@ export default class Technologies {
     this.unityModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.nodejsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.awsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
+    this.railsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
   }
 }

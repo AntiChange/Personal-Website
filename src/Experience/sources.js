@@ -139,4 +139,9 @@ export default [
     type: "gltfModel",
     path: "models/aws.glb",
   },
+  {
+    name: "railsModel",
+    type: "gltfModel",
+    path: "models/rails.glb",
+  },
 ];

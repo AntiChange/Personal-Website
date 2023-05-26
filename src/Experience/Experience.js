@@ -156,8 +156,13 @@ export default class Experience {
       },
       {
         // AWS label
-        position: new THREE.Vector3(36.7, -1.0, 0),
+        position: new THREE.Vector3(36.7, -1.1, 0),
         element: document.querySelector(".point-23"),
+      },
+      {
+        // Rails label
+        position: new THREE.Vector3(36.7, -2.1, 0),
+        element: document.querySelector(".point-24"),
       },
     ];
 
