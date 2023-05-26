@@ -154,6 +154,11 @@ export default class Experience {
         position: new THREE.Vector3(36.7, 1.45, 0),
         element: document.querySelector(".point-22"),
       },
+      {
+        // AWS label
+        position: new THREE.Vector3(36.7, -1.0, 0),
+        element: document.querySelector(".point-23"),
+      },
     ];
 
     // Resize event

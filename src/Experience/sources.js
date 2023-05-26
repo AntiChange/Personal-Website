@@ -134,4 +134,9 @@ export default [
     type: "gltfModel",
     path: "models/nodejs.glb",
   },
+  {
+    name: "awsModel",
+    type: "gltfModel",
+    path: "models/aws.glb",
+  },
 ];
