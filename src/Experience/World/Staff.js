@@ -89,6 +89,18 @@ export default class Staff {
     this.lines.push(mesh);
     this.scene.add(mesh);
 
+    // Contact Barline
+    points = [];
+    points.push(new THREE.Vector3(39.0, 2.05, 0));
+    points.push(new THREE.Vector3(39.0, -2.05, 0));
+    geometry = new THREE.BufferGeometry().setFromPoints(points);
+    line = new MeshLine();
+    line.setPoints(points);
+    line.setGeometry(geometry);
+    mesh = new THREE.Mesh(line, material);
+    this.lines.push(mesh);
+    this.scene.add(mesh);
+
     // Sharps (3D text)
     const sharpGeometry = new TextGeometry("#", {
       font: this.font,
