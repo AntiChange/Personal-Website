@@ -8,3 +8,4 @@ Unless stated below, all models were created myself using blender.
 [HTML Model by Erik Egnatosyan](https://sketchfab.com/3d-models/html-logo-3d-model-ab8b32cab3364027ab00a033a0b2ff38)
 [React Model by xenadus](https://sketchfab.com/3d-models/react-logo-76174ceeba96487f9863f974636f641e)
 [Java Model by PhantomXD](https://sketchfab.com/3d-models/java-442de0f1b8a54966bc16466b329105af)
+[Gmail Model (edited) originally by Channel Hai](https://sketchfab.com/3d-models/gmail-logo-7dcdcddfb40c4e4aab830292f8f6d964)

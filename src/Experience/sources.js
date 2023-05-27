@@ -144,4 +144,9 @@ export default [
     type: "gltfModel",
     path: "models/rails.glb",
   },
+  {
+    name: "gmailModel",
+    type: "gltfModel",
+    path: "models/gmail.glb",
+  },
 ];

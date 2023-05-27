@@ -164,6 +164,11 @@ export default class Experience {
         position: new THREE.Vector3(36.7, -2.1, 0),
         element: document.querySelector(".point-24"),
       },
+      {
+        // Email label
+        position: new THREE.Vector3(40.15, -1.6, 0),
+        element: document.querySelector(".point-25"),
+      },
     ];
 
     // Resize event

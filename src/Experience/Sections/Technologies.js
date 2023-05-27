@@ -52,56 +52,56 @@ export default class Technologies {
     this.reactModel.position.set(29.0, -1.85, 0.5);
     this.reactModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.reactModel);
-    
+
     // ThreeJS Model
     this.threejsModel = this.threejs.scene;
     this.threejsModel.scale.set(0.27, 0.27, 0.27);
     this.threejsModel.position.set(29.1, 0, 0.5);
     this.threejsModel.rotation.set(Math.PI / 2, 0, Math.PI / 24);
     this.scene.add(this.threejsModel);
-    
+
     // Github Model
     this.githubModel = this.github.scene;
     this.githubModel.scale.set(0.27, 0.27, 0.27);
     this.githubModel.position.set(31.0, 1, 0.5);
     this.githubModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.githubModel);
-    
+
     // Postgres Model
     this.postgresModel = this.postgres.scene;
     this.postgresModel.scale.set(0.23, 0.23, 0.23);
     this.postgresModel.position.set(33.0, -0.5, 0.5);
     this.postgresModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.postgresModel);
-    
+
     // MongoDB Model
     this.mongodbModel = this.mongodb.scene;
     this.mongodbModel.scale.set(0.4, 0.4, 0.4);
     this.mongodbModel.position.set(33.05, 1, 0.5);
     this.mongodbModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.mongodbModel);
-    
+
     // Unity Model
     this.unityModel = this.unity.scene;
     this.unityModel.scale.set(0.6, 0.6, 0.6);
     this.unityModel.position.set(35.05, 0.5, 0.5);
     this.unityModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.unityModel);
-    
+
     // NodeJS Model
     this.nodejsModel = this.nodejs.scene;
     this.nodejsModel.scale.set(0.2, 0.2, 0.2);
     this.nodejsModel.position.set(37.05, 1.0, 0.5);
     this.nodejsModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.nodejsModel);
-    
+
     // AWS Model
     this.awsModel = this.aws.scene;
     this.awsModel.scale.set(0.3, 0.3, 0.3);
     this.awsModel.position.set(37.05, -1.4, 0.5);
     this.awsModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.awsModel);
-    
+
     // Rails Model
     this.railsModel = this.rails.scene;
     this.railsModel.scale.set(0.2, 0.2, 0.2);
@@ -112,7 +112,8 @@ export default class Technologies {
 
   breathe() {
     this.reactModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
-    this.threejsModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3 + Math.PI / 24;
+    this.threejsModel.rotation.z =
+      Math.cos(this.time.elapsed / 1000) * 0.3 + Math.PI / 24;
     this.githubModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.postgresModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;
     this.mongodbModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.3;

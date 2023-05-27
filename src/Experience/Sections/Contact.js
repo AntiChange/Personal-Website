@@ -13,6 +13,7 @@ export default class Contact {
 
     // Resources
     this.font = this.resources.items.sectionFont;
+    this.gmail = this.resources.items.gmailModel;
 
     // 3D "Contact" text
     const textGeometry = new TextGeometry("Contact me", {
@@ -35,12 +36,24 @@ export default class Contact {
     // Models
     this.setModel();
   }
-  
+
   setModel() {
-  
+    // Gmail Model
+    this.gmailModel = this.gmail.scene;
+    this.gmailModel.scale.set(0.12, 0.12, 0.12);
+    this.gmailModel.position.set(40.5, -1.85, 0.5);
+    this.gmailModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.gmailModel);
   }
 
   breathe() {
-
+    this.gmailModel.scale.set(
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.12,
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.12,
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.12
+    );
+    this.gmailModel.rotation.x =
+      Math.cos(this.time.elapsed / 1000) * 0.2 + Math.PI / 2;
+    this.gmailModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2;
   }
 }

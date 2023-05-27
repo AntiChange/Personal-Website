@@ -131,14 +131,13 @@
     <div class="point point-15">
       <div class="label"></div>
       <div class="text">
-        React/React Native - Used in various side projects and throughout all internships.
+        React/React Native - Used in various side projects and throughout all
+        internships.
       </div>
     </div>
     <div class="point point-16">
       <div class="label"></div>
-      <div class="text">
-        ThreeJS - Used to make this!
-      </div>
+      <div class="text">ThreeJS - Used to make this!</div>
     </div>
     <div class="point point-17">
       <div class="label"></div>
@@ -174,19 +173,30 @@
     <div class="point point-22">
       <div class="label"></div>
       <div class="text">
-        NodeJS/ExpressJS - Experience developing various MERN stack applications (Smart Garden, COVID Connections)
+        NodeJS/ExpressJS - Experience developing various MERN stack applications
+        (Smart Garden, COVID Connections)
       </div>
     </div>
     <div class="point point-23">
       <div class="label"></div>
       <div class="text">
-        AWS - Work Experience using S3, Redshift, EC2, and other AWS tools. (First to third co-op)
+        AWS - Work Experience using S3, Redshift, EC2, and other AWS tools.
+        (First to third co-op)
       </div>
     </div>
     <div class="point point-24">
       <div class="label"></div>
       <div class="text">
         Ruby on Rails - Primary Framework used at Pixlee TurnTo (Forth co-op)
+      </div>
+    </div>
+    <div onclick="copyEmail()" class="point point-25" id="email">
+      <div class="label"></div>
+      <div class="text">
+        Feel free to reach out! 
+        <br />Clicking this box will copy the email to clipboard.
+        <br />
+        <br /><strong>chr1sf4ng@gmail.com</strong>
       </div>
     </div>
     <!-- <section class="opening">
@@ -198,6 +208,17 @@
     <script type="text/javascript" src="skrollr.js"></script>
     <script type="text/javascript">
       var s = skrollr.init();
+    </script>
+
+    <script>
+      function copyEmail() {
+        // Copy email to clipboard
+        // TODO: Test if working non-locally on secured URL
+        navigator.clipboard.writeText("chr1sf4ng@gmail.com");
+
+        // Alert the copied text
+        alert("Email copied to clipboard!");
+      }
     </script>
   </body>
 </html>
