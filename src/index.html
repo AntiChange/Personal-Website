@@ -209,15 +209,24 @@
     <script type="text/javascript">
       var s = skrollr.init();
     </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="sweetalert2.all.min.js"></script>
 
     <script>
       function copyEmail() {
         // Copy email to clipboard
         // TODO: Test if working non-locally on secured URL
         navigator.clipboard.writeText("chr1sf4ng@gmail.com");
-
+        
         // Alert the copied text
-        alert("Email copied to clipboard!");
+        Swal.fire({
+          heightAuto: false,
+          icon: 'success',
+          title: 'Email copied to clipboard!',
+          timer: 1500,
+          color: '#000000',
+          showConfirmButton: false,
+        })
       }
     </script>
   </body>
