@@ -14,6 +14,7 @@ export default class Contact {
     // Resources
     this.font = this.resources.items.sectionFont;
     this.gmail = this.resources.items.gmailModel;
+    this.linkedin = this.resources.items.linkedinModel;
 
     // 3D "Contact" text
     const textGeometry = new TextGeometry("Contact me", {
@@ -44,6 +45,13 @@ export default class Contact {
     this.gmailModel.position.set(40.5, -1.85, 0.5);
     this.gmailModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.gmailModel);
+    
+    // LinkedIn Model
+    this.linkedinModel = this.linkedin.scene;
+    this.linkedinModel.scale.set(0.27, 0.27, 0.27);
+    this.linkedinModel.position.set(42.5, -1.38, 0.5);
+    this.linkedinModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.linkedinModel);
   }
 
   breathe() {
@@ -55,5 +63,14 @@ export default class Contact {
     this.gmailModel.rotation.x =
       Math.cos(this.time.elapsed / 1000) * 0.2 + Math.PI / 2;
     this.gmailModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2;
+    
+    this.linkedinModel.scale.set(
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.27,
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.27,
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.27
+    );
+    this.linkedinModel.rotation.x =
+      Math.cos(this.time.elapsed / 1000) * 0.2 + Math.PI / 2;
+    this.linkedinModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2;
   }
 }

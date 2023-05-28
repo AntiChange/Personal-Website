@@ -149,4 +149,9 @@ export default [
     type: "gltfModel",
     path: "models/gmail.glb",
   },
+  {
+    name: "linkedinModel",
+    type: "gltfModel",
+    path: "models/linkedin.glb",
+  },
 ];
