@@ -174,6 +174,11 @@ export default class Experience {
         position: new THREE.Vector3(42.15, -1.1, 0),
         element: document.querySelector(".point-26"),
       },
+      {
+        // AntiChange label
+        position: new THREE.Vector3(44.15, -0.1, 0),
+        element: document.querySelector(".point-27"),
+      },
     ];
 
     // Resize event

@@ -15,6 +15,7 @@ export default class Contact {
     this.font = this.resources.items.sectionFont;
     this.gmail = this.resources.items.gmailModel;
     this.linkedin = this.resources.items.linkedinModel;
+    this.antichange = this.resources.items.antichangeModel;
 
     // 3D "Contact" text
     const textGeometry = new TextGeometry("Contact me", {
@@ -52,6 +53,13 @@ export default class Contact {
     this.linkedinModel.position.set(42.5, -1.38, 0.5);
     this.linkedinModel.rotation.set(Math.PI / 2, 0, 0);
     this.scene.add(this.linkedinModel);
+    
+    // AntiChange Model
+    this.antichangeModel = this.antichange.scene;
+    this.antichangeModel.scale.set(0.27, 0.27, 0.27);
+    this.antichangeModel.position.set(44.5, -0.45, 0.5);
+    this.antichangeModel.rotation.set(Math.PI / 2, 0, 0);
+    this.scene.add(this.antichangeModel);
   }
 
   breathe() {
@@ -72,5 +80,14 @@ export default class Contact {
     this.linkedinModel.rotation.x =
       Math.cos(this.time.elapsed / 1000) * 0.2 + Math.PI / 2;
     this.linkedinModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2;
+    
+    this.antichangeModel.scale.set(
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.27,
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.27,
+      Math.cos(this.time.elapsed / 1000) * 0.01 + 0.27
+    );
+    this.antichangeModel.rotation.x =
+      Math.cos(this.time.elapsed / 1000) * 0.2 + Math.PI / 2;
+    this.antichangeModel.rotation.z = Math.cos(this.time.elapsed / 1000) * 0.2;
   }
 }

@@ -154,4 +154,9 @@ export default [
     type: "gltfModel",
     path: "models/linkedin.glb",
   },
+  {
+    name: "antichangeModel",
+    type: "gltfModel",
+    path: "models/antichange.glb",
+  },
 ];
