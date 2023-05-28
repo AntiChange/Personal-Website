@@ -270,6 +270,8 @@
 
       function playNote(soundobj) {
         var note = document.getElementById(soundobj);
+        note.pause();
+        note.currentTime = 0;
         note.play();
       }
     </script>
