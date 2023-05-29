@@ -39,6 +39,7 @@ export default class Resources extends EventEmitter {
         window.setTimeout(() => {
           document.body.classList.remove("stop-scrolling");
           document.body.classList.add("done-loading");
+          elements.addClass("active");
         }, 3000);
       },
       // Progress
