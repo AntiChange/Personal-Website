@@ -5,57 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎻💻🎹🎥</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-
-    <!-- jQuery -->
-    <script
-      src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-      type="text/javascript"
-    ></script>
-
-    <!-- Horizontal scroll plugin -->
-    <script type="text/javascript" src="../static/js/skrollr.js"></script>
-
-    <!-- Clipboard copy alert plugin -->
-    <script src="../static/js/sweetalert2.all.min.js"></script>
-
-    <!-- Other functions  -->
-    <script>
-      function copyEmail() {
-        // Copy email to clipboard
-        // TODO: Test if working non-locally on secured URL
-        navigator.clipboard.writeText("chr1sf4ng@gmail.com");
-
-        // Alert the copied text
-        Swal.fire({
-          heightAuto: false,
-          icon: "success",
-          title: "Email copied to clipboard!",
-          timer: 1500,
-          color: "#000000",
-          showConfirmButton: false,
-        });
-      }
-
-      function playNote(soundobj) {
-        var note = document.getElementById(soundobj);
-        note.pause();
-        note.currentTime = 0;
-        note.play();
-      }
-    </script>
-
-    <!-- Modal functionality -->
-    <script>
-      var elements = $(".modal-overlay, .modal");
-
-      $("point").click(function () {
-        elements.addClass("active");
-      });
-
-      $(".close-modal").click(function () {
-        elements.removeClass("active");
-      });
-    </script>
   </head>
   <body>
     <!-- Prevent hover while loading -->
@@ -347,8 +296,58 @@
     <audio id="linkedinNote" src="../audio/FSharp3.wav" />
     <audio id="antichangeNote" src="../audio/A3.wav" />
 
+    <!-- Horizontal scroll plugin -->
+    <script type="text/javascript" src="/src/skrollr.js"></script>
     <script type="text/javascript">
       var s = skrollr.init();
+    </script>
+
+    <!-- Clipboard copy alert plugin -->
+    <script src="/src/sweetalert2.all.min.js"></script>
+
+    <!-- jQuery -->
+    <script
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- Other functions  -->
+    <script>
+      function copyEmail() {
+        // Copy email to clipboard
+        // TODO: Test if working non-locally on secured URL
+        navigator.clipboard.writeText("chr1sf4ng@gmail.com");
+
+        // Alert the copied text
+        Swal.fire({
+          heightAuto: false,
+          icon: "success",
+          title: "Email copied to clipboard!",
+          timer: 1500,
+          color: "#000000",
+          showConfirmButton: false,
+        });
+      }
+
+      function playNote(soundobj) {
+        var note = document.getElementById(soundobj);
+        note.pause();
+        note.currentTime = 0;
+        note.play();
+      }
+    </script>
+
+    <!-- Modal functionality -->
+    <script>
+      var elements = $(".modal-overlay, .modal");
+
+      $("point").click(function () {
+        elements.addClass("active");
+      });
+
+      $(".close-modal").click(function () {
+        elements.removeClass("active");
+      });
     </script>
   </body>
 </html>
