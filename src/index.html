@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎻💻🎹🎥</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   </head>
   <body>
     <!-- Prevent hover while loading -->
-    <div id="blocker" ></div>
+    <div id="blocker"></div>
     <!-- Introduction and Instruction Modal -->
     <div class="modal-overlay">
       <div class="modal">
@@ -175,11 +175,14 @@
       <div class="label"></div>
       <div class="text">ThreeJS - Used to make this!</div>
     </div>
-    <div class="point point-17" onmouseover="playNote('githubNote')">
+    <div
+      class="point point-17"
+      onmouseover="playNote('githubNote')"
+      onclick="window.open('https://github.com/AntiChange/Personal-Website','mywindow');"
+    >
       <div class="label"></div>
       <div class="text">
         Github - Check out the source code for this website!
-        <!-- TODO: Make repo non-private, insert link here  -->
       </div>
     </div>
     <div class="point point-18" onmouseover="playNote('javaNote')">
@@ -254,12 +257,12 @@
     </div>
     <div
       class="point point-27"
-      onclick="window.open('https://github.com/AntiChange/Personal-Website','mywindow');"
+      onclick="window.open('https://github.com/AntiChange/','mywindow');"
       onmouseover="playNote('antichangeNote')"
     >
       <div class="label"></div>
       <div class="text">
-        Check out the source code and some of my other projects!
+        Check out some of my other projects!
         <br />
         <br />(Clicking this box will open the project repository in a new tab)
       </div>
