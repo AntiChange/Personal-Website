@@ -1,10 +1,15 @@
+@font-face {
+  src: url(../static/fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+  font-family: opensans;
+}
+
+a {
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
-}
-
-html {
-  background: #e1dce4;
 }
 
 /* Uncomment once finished; need to see loading bar for testing during development */
@@ -16,6 +21,8 @@ body,
 html {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  height: 100vh;
+  align-items: center;
 }
 
 h1,
@@ -240,27 +247,6 @@ h1 {
   opacity: 1;
 }
 
-/** * Mobile styling */
-@media only screen and (max-width: 39.9375em) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 0;
-    transform: scale(1.1);
-    padding: 0 !important;
-  }
-  .close-modal {
-    right: 20px !important;
-  }
-}
-
 #blocker {
   position: fixed;
   width: 100%;
@@ -270,4 +256,69 @@ h1 {
   right: 0;
   bottom: 0;
   z-index: 9999;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100vw
+}
+
+.mobile-container {
+  display: flex;
+}
+
+.text-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: opensans;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 40px;
+  animation: fadeIn 1.5s;
+}
+
+.welcome {
+  opacity: 0;
+  font-size: 30px;
+  animation: fadeIn 1.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;  
+  padding-bottom: 10px;
+}
+
+.about-me {
+  opacity: 0;
+  font-size: 20px;
+  animation: fadeIn 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+  padding: 10px;
+}
+
+.links {
+  opacity: 0;
+  font-size: 20px;
+  animation: fadeIn 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  padding: 10px;
+}
+
+.desktop-info {
+  opacity: 0;
+  animation: fadeIn 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  padding: 10px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
