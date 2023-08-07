@@ -322,7 +322,6 @@
       <script>
         function copyEmail() {
           // Copy email to clipboard
-          // TODO: Test if working non-locally on secured URL
           navigator.clipboard.writeText("chr1sf4ng@gmail.com");
 
           // Alert the copied text
@@ -378,7 +377,7 @@
                 <a target="_blank" href="https://github.com/AntiChange">
                   <img src="../static/images/github.png" style="width:40px;height:40px;padding:5px">
                 </a>
-                <a target="_blank" href="../Chris_Resume.pdf">
+                <a target="_blank" id="resume-pdf">
                   <img src="../static/images/resume.png" style="width:40px;height:40px;padding:5px">
                 </a>
                 <a target="_blank" href="mailto:chr1sf4ng@gmail.com" target="_blank">

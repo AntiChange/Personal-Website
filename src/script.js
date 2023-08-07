@@ -1,8 +1,10 @@
 import "./style.css";
 import Experience from "./Experience/Experience.js";
+import PDF from "../resume.pdf"
 
 // Start ThreeJS
 const experience = new Experience(document.querySelector("canvas.webgl"));
+document.getElementById("resume-pdf").href = PDF;
 
 function checkMobile() {
   let check = false;

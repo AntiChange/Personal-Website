@@ -59,6 +59,12 @@ module.exports = {
           filename: "assets/fonts/[hash][ext]",
         },
       },
+
+      // PDF (for resume)
+      {
+        test: /\.(pdf)$/,
+        use: ["file-loader?name=[name].pdf"],
+      },
     ],
   },
 };
