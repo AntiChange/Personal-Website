@@ -159,4 +159,9 @@ export default [
     type: "gltfModel",
     path: "models/antichange.glb",
   },
+  {
+    name: "xModel",
+    type: "gltfModel",
+    path: "models/x.glb",
+  },
 ];
